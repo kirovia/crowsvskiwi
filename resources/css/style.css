@@ -25,7 +25,7 @@ body {
 .container-bottom {
   margin: 1rem;
   height: 95vh;
-  width: 50%;
+  width: 95vh;
   padding: 0.5rem;
   display: grid;
   grid-template: repeat(4, 1fr) / repeat(4, 1fr);

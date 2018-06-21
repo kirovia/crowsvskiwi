@@ -280,7 +280,7 @@ a4.addEventListener('click', function () {
       } else if (a3Filled() === false && a2Filled() === false && a1Filled() === true) {
         a2.classList.toggle('box-highlight');
       } else if (a3Filled() === false && a2Filled() === false && a1Filled() === false) {
-        a1.classList.toggle('highlight');
+        a1.classList.toggle('box-highlight');
       };
       // East
       if (b4Filled() === false && c4Filled() === true) {
