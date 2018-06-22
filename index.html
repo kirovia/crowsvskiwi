@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
     <meta property="og:image" content="og_image.JPG">
     <meta property="og:title" content="Crows vs Kiwi">
     <meta property="og:description" content="Choose your bird and win!">
@@ -14,28 +15,42 @@
     <link rel="stylesheet" href="./resources/css/style.min.css">
   </head>
   <body>
-    <div class="container-top">
-      <div class="title">
-        <span class="title-crow">CROWS</span> vs <span class="title-kiwi">KIWI</span>
-      </div>
-      <div class="rules">
-        Welcome to Crows vs Kiwi! To play, click a piece and move it to a highlighted space. A piece must move as far as it can. To win, you must get all four of your pieces into one of four winning positions:<br><br>
-        <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><br>
-        Four in a row (horizontally or vertically)<br><br><br>
-        <i class="fa fa-kiwi-bird fa-2x"></i><br>
-        <i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br>
-        <i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br>
-        <i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br>
-        Diagonally (in the opposite of your starting orientation)<br><br><br>
-        <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><br>
-        <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><br>
-        Four in a square (anywhere on the board)<br><br><br>
-        <i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br><br><br><br><br>
-        <i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br>
-        Four corners
+    <div id="my-overlay" class="overlay">
+      <div class="overlay-content">
+        <span class="title-crow">CROWS</span><span>vs</span><span class="title-kiwi">KIWI</span>
+        <p>(Click anywhere to start)</p>
+        <p>RULES BELOW</p>
+        <div class="rules">
+          <div class="rule">
+            <p>Click a piece to select it, then click a highlighted space to move your piece there.</p>
+            <p>A piece must move as far as it can</p>
+            <p>To win, you must move your pieces into one of four winning positions:</p>
+          </div>
+          <div class="rule">
+            <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i>
+            <p>(A straight line horizontally or vertically)</p>
+          </div>
+          <div class="rule">
+            <i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><br>
+            <i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><br>
+            <i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><br>
+            <i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br>
+            <p>(Diagonally in the opposite of your starting orienation)</p>
+          </div>
+          <div class="rule">
+            <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><br>
+            <i class="fa fa-crow fa-2x"></i><i class="fa fa-crow fa-2x"></i><br>
+            <p>(A square anywhere on the board)</p>
+          </div>
+          <div class="rule">
+            <i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i><br><br><br><br><br>
+            <i class="fa fa-kiwi-bird fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-poo fa-2x"></i><i class="fa fa-kiwi-bird fa-2x"></i>
+            <p>(Four corners)</p>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="container-bottom">
+    <div class="container">
       <div id="a4" class="box">
         <i class="fa fa-4x fa-crow"></i>
       </div>

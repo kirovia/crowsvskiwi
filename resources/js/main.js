@@ -1,3 +1,11 @@
+// Overlay functionality
+function closeOverlay () {
+  document.getElementById('my-overlay').style.width = '0%';
+};
+document.getElementById('my-overlay').addEventListener('click', function() {
+  closeOverlay();
+});
+
 // Variables for each box
 var a4 = document.getElementById('a4');
 var b4 = document.getElementById('b4');
@@ -443,11 +451,11 @@ d4.addEventListener('click', function () {
       };
       // Highlighting avilable spaces to the south
       if (d3Filled() === false && d2Filled() === true) {
-        d3.hightlight;
+        d3.classList.toggle('box-highlight');
       } else if (d3Filled() === false && d2Filled() === false && d1Filled() === true) {
-        d2.classList.toggle('box-highlight');;
+        d2.classList.toggle('box-highlight');
       } else if (d3Filled() === false && d2Filled() === false && d1Filled() === false) {
-        d1.classList.toggle('box-highlight');;
+        d1.classList.toggle('box-highlight');
       };
     };
   };
@@ -607,7 +615,7 @@ c3.addEventListener('click', function () {
       };
       // South
       if (c2Filled() === false && c1Filled() === true) {
-        c2.hightlightl
+        c2.classList.toggle('box-highlight');
       } else if (c2Filled() === false && c1Filled() === false) {
         c1.classList.toggle('box-highlight');;
       };
@@ -1015,7 +1023,7 @@ c1.addEventListener('click', function () {
       c1i.classList.toggle('box-select');
       if (c2Filled() === true && d1Filled() === true && b1Filled() === true) {
         c1.classList.toggle('box-wiggle');
-        setTimeout(function(){c1i.classList.toggle('box-select');c1.classList.toggle('box-highlight')}, 500);
+        setTimeout(function(){c1i.classList.toggle('box-select');c1.classList.toggle('box-wiggle')}, 500);
       };
       // North
       if (c2Filled() === false && c3Filled() === true) {
