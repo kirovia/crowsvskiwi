@@ -1,6 +1,6 @@
 // Overlay functionality
 function closeOverlay () {
-  document.getElementById('my-overlay').style.width = '0%';
+  document.getElementById('my-overlay').style.height = '0%';
 };
 document.getElementById('my-overlay').addEventListener('click', function() {
   closeOverlay();
@@ -1093,4 +1093,25 @@ d1.addEventListener('click', function () {
       };
     };
   };
+});
+
+var boxes = document.body.children[1].children;
+// Secret character unlock
+document.getElementById('secret').addEventListener('click', function() {
+  a4i.classList.add('fa-dove');
+  b4i.classList.add('fa-dove');
+  c4i.classList.add('fa-dove');
+  d4i.classList.add('fa-dove');
+  a3i.classList.add('fa-dove');
+  b3i.classList.add('fa-dove');
+  c3i.classList.add('fa-dove');
+  d3i.classList.add('fa-dove');
+  a2i.classList.add('fa-dove');
+  b2i.classList.add('fa-dove');
+  c2i.classList.add('fa-dove');
+  d2i.classList.add('fa-dove');
+  a1i.classList.add('fa-dove');
+  b1i.classList.add('fa-dove');
+  c1i.classList.add('fa-dove');
+  d1i.classList.add('fa-dove');
 });

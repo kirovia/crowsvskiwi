@@ -64,6 +64,9 @@ body {
 .fa-poo {
   opacity: 0;
 }
+.fa-dove {
+  color: skyblue;
+}
 span {
   font-size: 4rem;
   margin-right: 1.25rem;
