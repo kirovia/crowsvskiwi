@@ -32,7 +32,29 @@ body {
   text-align: center;
   color: ghostwhite;
 }
+.rules {
+  font-size: 1.25rem;
+  margin-top: 40%;
+}
+.title-crow {
+  font-family: 'IM Fell English SC';
+  font-weight: bold;
+}
+.title-kiwi {
+  font-family: 'Pacifico';
+}
+.rule {
+  margin-top: 5rem;
+}
+span {
+  font-size: 4rem;
+  margin-right: 1.25rem;
+}
+p {
+  margin-top: 1rem;
+}
 
+/* Main Content */
 .container {
   margin: 1rem;
   height: 95vh;
@@ -55,41 +77,6 @@ body {
   opacity: 0.5;
   transform: scale(1.1);
 }
-.fa-crow {
-  color: rgb(255, 111, 105);
-}
-.fa-kiwi-bird {
-  color: firebrick;
-}
-.fa-poo {
-  opacity: 0;
-}
-.fa-dove {
-  color: skyblue;
-}
-span {
-  font-size: 4rem;
-  margin-right: 1.25rem;
-}
-p {
-  margin-top: 1rem;
-}
-.rules {
-  font-size: 1.25rem;
-  margin-top: 40%;
-}
-.rule {
-  margin-top: 5rem;
-}
-.title-crow {
-  font-family: 'IM Fell English SC';
-  font-weight: bold;
-}
-.title-kiwi {
-  font-family: 'Pacifico';
-}
-
-/* Can't move piece animation */
 .box-wiggle {
   animation: box 0.5s;
 }
@@ -107,6 +94,17 @@ p {
     transform: rotate(-10deg);
   }
 }
+.fa-crow {
+  color: rgb(255, 111, 105);
+}
+.fa-kiwi-bird {
+  color: firebrick;
+}
+.fa-poo {
+  opacity: 0;
+}
+
+/* Mobile Version */
 @media only screen and (max-width: 580px) {
   .container {
     height: 100vw;

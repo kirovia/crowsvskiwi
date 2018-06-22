@@ -6,43 +6,7 @@ document.getElementById('my-overlay').addEventListener('click', function() {
   closeOverlay();
 });
 
-// Variables for each box
-var a4 = document.getElementById('a4');
-var b4 = document.getElementById('b4');
-var c4 = document.getElementById('c4');
-var d4 = document.getElementById('d4');
-var a3 = document.getElementById('a3');
-var b3 = document.getElementById('b3');
-var c3 = document.getElementById('c3');
-var d3 = document.getElementById('d3');
-var a2 = document.getElementById('a2');
-var b2 = document.getElementById('b2');
-var c2 = document.getElementById('c2');
-var d2 = document.getElementById('d2');
-var a1 = document.getElementById('a1');
-var b1 = document.getElementById('b1');
-var c1 = document.getElementById('c1');
-var d1 = document.getElementById('d1');
-
-// Variables for the i tags within each box
-var a4i = document.getElementById('a4').children[0];
-var b4i = document.getElementById('b4').children[0];
-var c4i = document.getElementById('c4').children[0];
-var d4i = document.getElementById('d4').children[0];
-var a3i = document.getElementById('a3').children[0];
-var b3i = document.getElementById('b3').children[0];
-var c3i = document.getElementById('c3').children[0];
-var d3i = document.getElementById('d3').children[0];
-var a2i = document.getElementById('a2').children[0];
-var b2i = document.getElementById('b2').children[0];
-var c2i = document.getElementById('c2').children[0];
-var d2i = document.getElementById('d2').children[0];
-var a1i = document.getElementById('a1').children[0];
-var b1i = document.getElementById('b1').children[0];
-var c1i = document.getElementById('c1').children[0];
-var d1i = document.getElementById('d1').children[0];
-
-// Clearing all currently highlighted/selected boxes
+// Clears all currently highlighted boxes
 function clearHighlights () {
   a4.classList.remove('box-highlight');
   b4.classList.remove('box-highlight');
@@ -61,6 +25,8 @@ function clearHighlights () {
   c1.classList.remove('box-highlight');
   d1.classList.remove('box-highlight');
 };
+
+// Clears any currently selected box
 function clearSelection () {
   if (a4i.classList.contains('box-select')) {
     a4i.classList.remove('box-select');
@@ -112,7 +78,7 @@ function clearSelection () {
   };
 };
 
-// Checking if a piece is selected
+// Checks if a piece is selected
 function isSelected (square) {
   if (square.classList.contains('box-select')) {
     return true;
@@ -121,7 +87,7 @@ function isSelected (square) {
   };
 };
 
-// Function to move piece
+// Moves piece
 function movePiece (formerSquare, latterSquare) {
   if (formerSquare.classList.contains('fa-crow')) {
     formerSquare.classList.toggle('fa-crow');
@@ -134,7 +100,7 @@ function movePiece (formerSquare, latterSquare) {
   clearSelection();
 }
 
-// Checking each box to see if it is occupied by a piece
+// Checks each box to see if it is occupied by a piece
 function a4Filled () {
   if (a4i.classList.contains('fa-crow') || a4i.classList.contains('fa-kiwi-bird')) {
     return true;
@@ -248,7 +214,44 @@ function d1Filled () {
   }
 };
 
-// Highlighting available spaces for all boxes
+// Variable shortcuts for each box
+var a4 = document.getElementById('a4');
+var b4 = document.getElementById('b4');
+var c4 = document.getElementById('c4');
+var d4 = document.getElementById('d4');
+var a3 = document.getElementById('a3');
+var b3 = document.getElementById('b3');
+var c3 = document.getElementById('c3');
+var d3 = document.getElementById('d3');
+var a2 = document.getElementById('a2');
+var b2 = document.getElementById('b2');
+var c2 = document.getElementById('c2');
+var d2 = document.getElementById('d2');
+var a1 = document.getElementById('a1');
+var b1 = document.getElementById('b1');
+var c1 = document.getElementById('c1');
+var d1 = document.getElementById('d1');
+
+// Variable shortcuts for the i tags within each box
+var a4i = document.getElementById('a4').children[0];
+var b4i = document.getElementById('b4').children[0];
+var c4i = document.getElementById('c4').children[0];
+var d4i = document.getElementById('d4').children[0];
+var a3i = document.getElementById('a3').children[0];
+var b3i = document.getElementById('b3').children[0];
+var c3i = document.getElementById('c3').children[0];
+var d3i = document.getElementById('d3').children[0];
+var a2i = document.getElementById('a2').children[0];
+var b2i = document.getElementById('b2').children[0];
+var c2i = document.getElementById('c2').children[0];
+var d2i = document.getElementById('d2').children[0];
+var a1i = document.getElementById('a1').children[0];
+var b1i = document.getElementById('b1').children[0];
+var c1i = document.getElementById('c1').children[0];
+var d1i = document.getElementById('d1').children[0];
+
+
+// These event listeners will either move a piece to the box that was clicked, or display available spaces for the box that was clicked
 a4.addEventListener('click', function () {
   // If a piece is moving into this space
   if (a4.classList.contains('box-highlight')) {
@@ -1093,25 +1096,4 @@ d1.addEventListener('click', function () {
       };
     };
   };
-});
-
-var boxes = document.body.children[1].children;
-// Secret character unlock
-document.getElementById('secret').addEventListener('click', function() {
-  a4i.classList.add('fa-dove');
-  b4i.classList.add('fa-dove');
-  c4i.classList.add('fa-dove');
-  d4i.classList.add('fa-dove');
-  a3i.classList.add('fa-dove');
-  b3i.classList.add('fa-dove');
-  c3i.classList.add('fa-dove');
-  d3i.classList.add('fa-dove');
-  a2i.classList.add('fa-dove');
-  b2i.classList.add('fa-dove');
-  c2i.classList.add('fa-dove');
-  d2i.classList.add('fa-dove');
-  a1i.classList.add('fa-dove');
-  b1i.classList.add('fa-dove');
-  c1i.classList.add('fa-dove');
-  d1i.classList.add('fa-dove');
 });
